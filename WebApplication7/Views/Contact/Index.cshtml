@@ -16,26 +16,31 @@
 
         <div class="form-group">
             <label for="user" style="font-size: 16px"><b>Name:</b></label>
-            @Html.TextBoxFor(m => m.FromName, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.FromName, "", new { @class = "text-danger" })
+            @Html.TextBoxFor(m => m.FromName, new { @class = "form-control", data_bind = "value: name" })
+            @Html.ValidationMessageFor(m => m.FromName, "", new { @class = "text-danger", id = "nameMsg" })
         </div>
         <div class="form-group">
             <label for="email" style="font-size: 16px"><b>E-mail:</b></label>
-            @Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.FromEmail, "", new { @class = "text-danger" })
+            @Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control", data_bind = "value: email" })
+            @Html.ValidationMessageFor(m => m.FromEmail, "", new { @class = "text-danger", id = "emailMsg" })
         </div>
         <div class="form-group">
             <label for="comment" style="font-size: 16px"><b>Comment:</b></label>
-            @Html.TextAreaFor(m => m.Message, new { @class = "form-control", style = "min-width: 100%; min-height: 150px" })
-            @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
+            @Html.TextAreaFor(m => m.Message, new { @class = "form-control", data_bind = "value: message", style = "min-width: 100%; min-height: 150px" })
+            @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger", id = "messageMsg" })
         </div>
-        <p id="textInfo">@ViewBag.message</p>
+        <p data-bind="text: submitMessage"></p>
+        <p id="submitInfo">@ViewBag.message</p>
         <div class="form-group">
             <div style="text-align: center">
                 <input type="submit" class="btn btn-primary" value="Send" style="min-width: 80px" />
-                <input type="reset" class="btn btn-danger" value="Clear" style="min-width: 80px" />
+                <input type="button" data-bind="click: clearFields" class="btn btn-danger" value="Clear" style="min-width: 80px" />
             </div>
         </div>
     }
 </div>
 
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/contact_script.js"></script>

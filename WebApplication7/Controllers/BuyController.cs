@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace WebApplication7.Controllers
 {
-    public class OrderController : Controller
+    public class BuyController : Controller
     {
         // GET: Order
         public ActionResult Index()
