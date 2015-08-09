@@ -1,0 +1,62 @@
+﻿@model WebApplication7.Models.Car
+@{
+    ViewBag.Title = "Car Details";
+}
+
+<h2 style="font-size: 30px; text-align: center; margin-top: 30px"><b>Car Details</b></h2>
+
+<div class="jumbotron" style="margin: 0 auto; max-width: 800px">
+    <table class="table">
+        <tr>
+            <td>
+                <p style="font-size: 18px"><b>Brand:</b></p>
+            </td>
+            <td>
+                <p style="font-size: 18px">@Html.DisplayFor(model => model.Brand)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 18px"><b>Model:</b></p>
+            </td>
+            <td>
+                <p style="font-size: 18px">@Html.DisplayFor(model => model.Model)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 18px"><b>Price:</b></p>
+            </td>
+            <td>
+                <p style="font-size: 18px">@Html.DisplayFor(model => model.Price) USD</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 18px"><b>Year:</b></p>
+            </td>
+            <td>
+                <p style="font-size: 18px">@Html.DisplayFor(model => model.Year)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 18px"><b>Volume:</b></p>
+            </td>
+            <td>
+                <p style="font-size: 18px">@Html.DisplayFor(model => model.Volume) cc</p>
+            </td>
+        </tr>
+    </table>
+
+    <div>
+
+    </div>
+
+    <div style="text-align: center">
+        @Html.ActionLink("Back", "Index", null, new { @class = "btn btn-primary", style = "min-width: 80px" })
+        @Html.ActionLink("Buy", "Purchase", new { id = Model.ID }, new { @class = "btn btn-success", style = "min-width: 80px" })
+    </div>
+    
+</div>
+
