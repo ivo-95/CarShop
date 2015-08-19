@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ed5800f8-0ee0-4-231-b9ee" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\C\#\\Web\\WebApplication7\\WebApplication7\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\C\#\\Web\\WebApplication7\\WebApplication7\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Add write permission to App_Data Folder" description="Add write permission to App_Data folder" value="ed5800f8-0ee0-4-231-b9ee/App_Data" tags="Hidden">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\C\#\\Web\\WebApplication7\\WebApplication7\\obj\\Release\\Package\\PackageTmp\\App_Data$" />
+  </parameter>
+  <parameter name="connStr-Web.config Connection String" description="" value="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Cars.mdf;Database=Cars;Trusted_Connection=True;MultipleActiveResultSets=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\C\#\\Web\\WebApplication7\\WebApplication7\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='connStr']/@connectionString" />
+  </parameter>
+</parameters>

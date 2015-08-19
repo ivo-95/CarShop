@@ -3,35 +3,56 @@
     padding-bottom: 20px;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
 }
 
-.nav-button {
-    font-size: 20px;
-    max-height: 100%;
-    /*margin-left: 10px;
-    margin-right: 10px;*/
-}
-
-.navbar-text {
-    font-size: 20px;
+.navbar {
+    width: 100%;
     margin: 0;
     padding: 0;
-    display: inline-block;
 }
 
-.navbar-header {
+/*.nav-button {
+    font-size: 20px;
+    /*transition: color .3s;
+}*/
+
+/*.nav-button:hover {
+    color: #FF9933;
+    background-color: #FF9933;
+}*/
+
+.navbar-default .navbar-nav > li > a {
+    font-size: 20px;
+    transition: color .3s;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #FF9933;
+    background-color: initial;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    transition: background-color .3s;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar {
+    background-color: #FF9933;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    visibility: hidden;
+    position: absolute;
     margin: 0;
-    padding: 0;
-    line-height: 0;
+}
+
+@media (max-width: 767px) {
+    .navbar-brand {
+        visibility: visible;
+        position: relative;
+    }
 }
